@@ -1,0 +1,48 @@
+.form{
+
+ width: 70%;
+ margin: auto;
+
+ border: 1px solid black;
+
+ display: grid;
+
+ grid-template-columns: auto;
+ grid-template-rows: auto;
+
+}
+input{
+
+    width: 100%;
+    outline: none;
+    border: none;
+    border-collapse: collapse;
+}
+
+input:active{
+
+    outline: none;
+    border-color: collapse;
+}
+
+.num{
+
+    display: grid;
+    grid-template-columns: 25%;
+    width: 25%;
+    border: 1px solid rgb(255, 0, 0);
+}
+.noms{
+
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: space-between;
+    border: 1px solid black;
+}
+.social-info{
+
+    border: 1px solid black;
+}
+.contacts{
+    border: 1px solid black;
+}
