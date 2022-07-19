@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire Super Marche</title>
+    <style>
+        h1{
+            width: 100%;
+            text-align: center;
+        }
+        fieldset{
+            width: 149%;
+            margin: auto;
+            background-color: grey;
+            width: fit-content;
+        }
+        .button{
+
+            grid-template-columns: 25% 25%;
+            grid-template-rows: auto;
+            justify-content: center;
+            align-items: center;
+            grid-gap: 25px;
+
+        }
+        input{
+
+            width: 50px;
+        }
+        label{
+            font-weight: bold;
+        }
+        hr{
+            width: 100%;
+            border: 1px solid green;
+        }
+        .Background{
+            width: 70%;
+            margin: auto;
+            border-radius: 30px;
+            padding-top:3%;
+            padding-bottom:3%;
+        }
+        legend{
+
+            width:100% ;
+        }
+        select{
+
+            color: blueviolet;
+        }
+        button{
+            
+            height: 50px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>SUPER MACHE KIN MARKET</h1>
+    <div class="Background" style="background-color: rgb(200, 0, 39);">
+        <form action="">
+            <fieldset style="">
+                <legend><div style="background-color: white;" >Premier Produit</div></legend>
+                <label for="">Produit</label>
+                <select name="" id="Produit1" onchange="Produit()">
+                    <option value="Ordinateur">Ordinateur</option>
+                    <option value="Telephone">Telephone</option>
+                    <option value="Pain au lait">Pain au lait</option>
+                </select>---|---
+                <label for="">Prix Unitaire(FC):</label>
+                <input type="text" id="Pu1">---|---
+                <label for="">Quantité:</label>
+                <input type="text">---|---
+                <label for="">Prix Total:</label>
+                <input type="text">--
+            </fieldset>
+            <hr>
+            <fieldset>
+                <legend><div style="background-color: white;" >Deuxieme Produit</div></legend>
+                <label for="">Produit</label>
+                <select name="">
+                    <option value="Ordinateur">Ordinateur</option>
+                    <option value="Telephone">Telephone</option>
+                    <option value="Pain au lait">Pain au lait</option>
+                </select>---|---
+                <label for="">Prix Unitaire(FC):</label>
+                <input type="text">---|---
+                <label for="">Quantité:</label>
+                <input type="text">---|---
+                <label for="">Prix Total:</label>
+                <input type="text">--
+            </fieldset>
+            <hr>
+            <fieldset>
+                <legend><div style="background-color: white;" >Troisième Produit</div></legend>
+                <label for="">Produit</label>
+                <select name="" id="">
+                    <option value="Ordinateur">Ordinateur</option>
+                    <option value="Telephone">Telephone</option>
+                    <option value="Pain au lait">Pain au lait</option>
+                </select>---|---
+                <label for="">Prix Unitaire(FC):</label>
+                <input type="text">---|---
+                <label for="">Quantité:</label>
+                <input type="text">---|---
+                <label for="">Prix Total:</label>
+                <input type="text">--
+            </fieldset>
+            <hr>
+            <div class="button" style="display:grid;">
+            <button type="" style="background-color: tomato; border: 1px solid white;">Calculer!!!</button>
+            <button type="" style="background-color: tomato; border:1px solid white;">Imprimé la facture</button>
+            </div>
+            <hr>
+            <fieldset style="background-color: lightblue;">
+                <legend><div style="background-color: white;" >TOTAL GENERAL</div></legend>
+                <label for="">PTHT</label>
+               <input type="text" readonly>---|---
+                <label for="">TVA(16%)</label>
+                <input type="text" readonly>---|---
+                <label for="">Red(20%)</label>
+                <input type="text" readonly>---|---
+                <label for="">Net à payer</label>
+                <input type="text" readonly>--
+            </fieldset>
+        </form> 
+    </div>
+</body>
+<script src="super.js">
+</script>
+</html>
