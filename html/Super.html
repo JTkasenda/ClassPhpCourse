@@ -6,15 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulaire Super Marche</title>
     <style>
+        /* form{
+            width: %;
+            margin: auto;
+            border: 5px solid white;
+        } */
+        body{
+
+            background-image: url(../img/kinmarket.jpeg);
+        }
         h1{
             width: 100%;
             text-align: center;
         }
         fieldset{
-            width: 149%;
+
+            width:80%;
             margin: auto;
-            background-color: grey;
-            width: fit-content;
+            background-color: rgb(200, 200, 200);
+            /* width: fit-content; */
+            border: 1px solid white;
         }
         .button{
 
@@ -27,25 +38,29 @@
         }
         input{
 
-            width: 50px;
+            width: 96px;
         }
         label{
             font-weight: bold;
         }
         hr{
             width: 100%;
-            border: 1px solid green;
+            border: 1px solid rgb(2, 180, 2);
         }
         .Background{
-            width: 70%;
+
+            width: 80%;
             margin: auto;
+            /* height: 400px; */
             border-radius: 30px;
             padding-top:3%;
             padding-bottom:3%;
+            background-color: rgb(173, 38, 83);
         }
         legend{
 
-            width:100% ;
+            width:100%;
+            font-weight: bold;
         }
         select{
 
@@ -55,79 +70,82 @@
             
             height: 50px;
             font-weight: bold;
+            font-size:28px;
         }
     </style>
 </head>
 <body>
-    <h1>SUPER MACHE KIN MARKET</h1>
-    <div class="Background" style="background-color: rgb(200, 0, 39);">
-        <form action="">
-            <fieldset style="">
+    <h1>SUPER MARCHE <span style="color: red; font-style: italic;">KIN MARKET</span></h1>
+    <!-- <div > -->
+        <form class="Background">
+            <fieldset>
                 <legend><div style="background-color: white;" >Premier Produit</div></legend>
                 <label for="">Produit</label>
-                <select name="" id="Produit1" onchange="Produit()">
+                <select name="" id="Produit1" onchange="Produit('Produit1', 'Pu1')">
                     <option value="Ordinateur">Ordinateur</option>
                     <option value="Telephone">Telephone</option>
                     <option value="Pain au lait">Pain au lait</option>
                 </select>---|---
                 <label for="">Prix Unitaire(FC):</label>
-                <input type="text" id="Pu1">---|---
+                <input type="text" id="Pu1" readonly>---|---
                 <label for="">Quantité:</label>
-                <input type="text">---|---
+                <input type="text" id="qte1" oninput="PrixTotal('qte1', 'Pu1', 'pt1')">---|---
                 <label for="">Prix Total:</label>
-                <input type="text">--
+                <input type="text"  id="pt1" readonly>-
             </fieldset>
             <hr>
             <fieldset>
                 <legend><div style="background-color: white;" >Deuxieme Produit</div></legend>
                 <label for="">Produit</label>
-                <select name="">
+                <select name="" id="Produit2" onchange="Produit('Produit2', 'Pu2')">
                     <option value="Ordinateur">Ordinateur</option>
                     <option value="Telephone">Telephone</option>
                     <option value="Pain au lait">Pain au lait</option>
                 </select>---|---
                 <label for="">Prix Unitaire(FC):</label>
-                <input type="text">---|---
+                <input type="text" id="Pu2">---|---
                 <label for="">Quantité:</label>
-                <input type="text">---|---
+                <input type="text" id="qte2" oninput="PrixTotal('qte2', 'Pu2', 'pt2')">---|---
                 <label for="">Prix Total:</label>
-                <input type="text">--
+                <input type="text" id="pt2">-
             </fieldset>
             <hr>
             <fieldset>
                 <legend><div style="background-color: white;" >Troisième Produit</div></legend>
                 <label for="">Produit</label>
-                <select name="" id="">
+                <select name="" id="Produit3" onchange="Produit('Produit3', 'Pu3')">
                     <option value="Ordinateur">Ordinateur</option>
                     <option value="Telephone">Telephone</option>
                     <option value="Pain au lait">Pain au lait</option>
                 </select>---|---
                 <label for="">Prix Unitaire(FC):</label>
-                <input type="text">---|---
+                <input type="text" id="Pu3">---|---
                 <label for="">Quantité:</label>
-                <input type="text">---|---
+                <input type="text" id="qte3" oninput="PrixTotal('qte3', 'Pu3', 'pt3')">---|---
                 <label for="">Prix Total:</label>
-                <input type="text">--
+                <input type="text" id="pt3">-
             </fieldset>
             <hr>
             <div class="button" style="display:grid;">
-            <button type="" style="background-color: tomato; border: 1px solid white;">Calculer!!!</button>
+            <button style="background-color: tomato; border: 1px solid white;" onclick="sum()">Calculer!!!</button>
             <button type="" style="background-color: tomato; border:1px solid white;">Imprimé la facture</button>
             </div>
             <hr>
-            <fieldset style="background-color: lightblue;">
+            <fieldset style="background-color: rgb(158, 223, 245);">
                 <legend><div style="background-color: white;" >TOTAL GENERAL</div></legend>
+            <center>
                 <label for="">PTHT</label>
-               <input type="text" readonly>---|---
+               <input type="text" readonly id="PTHT">
                 <label for="">TVA(16%)</label>
-                <input type="text" readonly>---|---
+                <input type="text" readonly id="Tva">
                 <label for="">Red(20%)</label>
-                <input type="text" readonly>---|---
+                <input type="text" readonly id="Red">
                 <label for="">Net à payer</label>
-                <input type="text" readonly>--
+                <input type="text" readonly id="Net">
+            </center>
             </fieldset>
         </form> 
-    </div>
+    <!-- </div> -->
 </body>
 <script src="super.js">
 </script>
